@@ -1,0 +1,7 @@
+# 自定义一个repeat()函数
+# 描述：每30秒执行一次，执行命令直至成功
+# 用法：repeat wget -c http://www.example.com/software-0.1.tar.gz
+
+
+repeat() { while :; do $@ && return; sleep 30; done }
+
